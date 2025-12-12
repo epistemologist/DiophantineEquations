@@ -89,3 +89,18 @@ a=-8, b=1, c=0, 56 = 2 = 0
 a=1, b=1, c=1, 2 = 2 = 2
 a=0, b=0, c=0, 0 = 0 = 0
 ```
+
+### Polygonal Trianglar Square Number
+We attempt to extend the above argument to the equation $P_3(a) = P_4(b) = P_s(c) \iff a^2+a = 2b^2 = (s-2)c^2 - (s-4)c$ where $s > 6$ is an integer. (Note that if $s=6$, since all hexagonal numbers are triangular numbers, this reduces to finding all [hexagonal square numbers](https://mathworld.wolfram.com/HexagonalSquareNumber.html) )
+
+For $t_1, \cdots ,t_5 \in \mathbb{Z}$, we let $$\begin{cases} X = t_1 a + t_2 \\ Y = t_3b \\ Z = t_4 c + t_5 \end{cases} \implies \begin{cases} X^2 = t_1^2a^2 + 2t_1t_2a + t_2^2 \\ Y^2 = t_3^2 b^2  \\ Z^2= t_4^2 c^2 + 2 t_4t_5c + t_5^2 \end{cases}$$
+
+Using the relation $a^2+a=2b^2 \implies b^2 = (a^2+a)/2$, we have:
+$$\begin{aligned} X^2 - kY^2 &=  t_1^2a^2 + 2t_1t_2a + t_2^2 -k t_3^2b^2 \\&= t_1^2a^2 + 2t_1t_2a + t_2^2 - k t_3^2(a^2+a)/2  \\ &= \underbrace{ (t_1^2 - kt_3^2/2)}_{=0}a^2 + \underbrace{ (2t_1t_2-kt_3^2/2) }_{=0}a + t_3^2 \end{aligned}$$
+
+and similarly, using the relation $(s-2)c^2 - (s-4)c = 2b^2 \implies b^2 = ((s-2)c^2 - (s-4)c)/2$, we have:
+$$\begin{aligned} Z^2 - l Y^2 &= t_4^2 c^2 + 2 t_4t_5c + t_5^2 -lt_3^2b^2 \\ &= t_4^2 c^2 + 2 t_4 t_5 c + t_5^2 - lt_3^2\left(\frac{s-2}{2} c^2 -  \frac{s-4}{2} c\right) \\&= \underbrace{ \left( t_4^2 - lt_3^2(s-2)/2\right)}_{=0} c^2 + \underbrace{ \left(2t_4t_5 -lt_3^2(s-4)/2\right)}_{=0} c + t_5^2 \end{aligned}$$
+
+We therefore have the polynomial system $\begin{cases} 2 t_1^2 - k t_3^2 = 0 \\ 4 t_1 t_2 - k t_3^2 = 0 \\ 2t_4^2 - l t_3^2 (s-2) = 0 \\ 4 t_4 t_5 - l t_3^2 (s-4) = 0 \end{cases}$
+
+
