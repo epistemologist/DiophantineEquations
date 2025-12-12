@@ -5,20 +5,38 @@ We define the $n^{th}$ polygonal number of $s$ sides to be $$P_s(n) = \frac{1}{2
 ### Pentagonal Triangular Square Number
 Assume that there existed a pentagonal triangular square number; i.e. there existed a solution to $P_3(a) = P_4(b) = P_5(c) \iff a^2+a = 2b^2 = 3c^2 - c$. We have:
 
-$$\begin{cases} X = 2a+1 \\ Y = 2b  \\ Z = 6c-1 \end{cases}\implies \begin{cases}X^2 = 4a^2+4a+1 \\ Y^2 = 4b^2 \\ Z^2 = 36c^2 -12c+1\end{cases}$$
+$$\begin{cases}X = 2a+1 \\\\ Y = 2b  \\\\ Z = 6c-1\end{cases}\implies \begin{cases}X^2 = 4a^2+4a+1 \\\\ Y^2 = 4b^2 \\\\ Z^2 = 36c^2 -12c+1\end{cases}$$
 
 Therefore, we have:
-$$\begin{aligned}X^2 = 4a^2+4a+1 &=4(a^2+a)+1 \\ &= 4(2b^2) + 1 \\ &= 8b^2+1 \\ &=2Y^2 + 1\end{aligned}$$ 
+```math
+\begin{aligned}
+X^2 = 4a^2+4a+1 &=4(a^2+a)+1 \\ 
+&= 4(2b^2) + 1 \\ 
+&= 8b^2+1 \\ 
+&=2Y^2 + 1
+\end{aligned}
+```
 and so $X^2-2Y^2=1$.
 
 Similarly, 
-$$\begin{aligned}Z^2 = 36c^2-12c+1&=12(3c^2-c)+1 \\ &=  12(2b^2)+1 \\ &= 24b^2+1 \\ &= 6Y^2+1\end{aligned}$$ 
+```math
+\begin{aligned}Z^2 = 36c^2-12c+1&=12(3c^2-c)+1 \\
+&=  12(2b^2)+1 \\
+&= 24b^2+1 \\
+&= 6Y^2+1\end{aligned}
+``` 
 and so $Z^2-6Y^2=1$.
 
-We therefore have the system of Pell equations: $$\begin{cases}X^2-2Y^2=1 \\ Z^2-6Y^2=1 \end{cases}$$
+We therefore have the system of Pell equations $$X^2-2Y^2=1, Z^2-6Y^2=1$$ 
 
 Notice that:
-$$\begin{aligned} X^2 Z^2 &= (1+2Y^2)(1+6Y^2) \\ &\implies (XYZ)^2 = Y^2(1+2Y^2)(1+6Y^2) \\ &\implies 144(XYZ)^2 = (12XYZ)^2 = 12Y^2 (6+12Y^2)(2 + 12 Y^2)\end{aligned}$$
+```math
+\begin{aligned}
+X^2 Z^2 &= (1+2Y^2)(1+6Y^2) \\
+&\implies (XYZ)^2 = Y^2(1+2Y^2)(1+6Y^2) \\
+&\implies 144(XYZ)^2 = (12XYZ)^2 = 12Y^2 (6+12Y^2)(2 + 12 Y^2)
+\end{aligned}
+```
 
 Letting $u = 12XYZ, v = 12Y^2$, we have the equation $u^2 = v(v+2)(v+6)$ which is an elliptic curve.
 
